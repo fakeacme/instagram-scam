@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Login scam model</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="/img/logo.jpeg" alt="Logo">
+        </div>
+        <div class="login-form">
+            <input type="text" placeholder="Email" id="emailInput">
+            <input type="password" placeholder="Password" id="passwordInput">
+            <button id="submitBtn">Log In</button>
+            <div class="or-divider">OR</div>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>    
+    <div class="result-container" id="resultContainer">
+        <button id="popupCloseBtn"><i class='bx bx-x bx-rotate-90'></i></button>
+        <ul id="email-li">
+            <li>Emails</li>
+        </ul>
+        <ul id="password-li">
+            <li>Passwords</li>
+        </ul>
+        <ul id="time-li">
+            <li>Time</li>
+        </ul>
+    </div>
+<script src="/script.js"></script>
+</body>
+</html>

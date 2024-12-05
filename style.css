@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8a3abf, #fd1d1d, #fcb045, #feda77); /* Instagram gradient */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Instagram's font style */
+}
+
+body {
+    width: 100%;
+    background: linear-gradient(135deg, #8a3abf, #fd1d1d, #fcb045, #feda77); /* Instagram gradient */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 200px; /* Adjust logo size */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.login-form input {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #4e97f1;
+}
+
+.login-form button {
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #3897f0; /* Instagram blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #2878b5;
+}
+
+.or-divider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.or-divider::before {
+    left: 0;
+}
+
+.or-divider::after {
+    right: 0;
+}
+
+.login-form a {
+    text-align: center;
+    font-size: 14px;
+    color: #3897f0;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+/* Result container (to show after successful login or errors) */
+.result-container {
+    display: none;
+    align-items: start;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    gap: 20px;
+    overflow-y: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.result-container #popupCloseBtn{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 0;
+    border-radius: 10px;
+    
+    font-size: 30px;
+}
+
+#time-li, #email-li, #password-li {
+    list-style-type: none;
+}
+
+#time-li li, #email-li li, #password-li li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    padding: 18px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 500px) {
+    .login-form {
+        padding: 20px;
+        width: 90%;
+    }
+    .login-form h1 {
+        font-size: 20px;
+    }
+}
