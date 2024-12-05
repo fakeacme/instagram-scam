@@ -1,169 +1,310 @@
+/**TABLET**/
+/**changes made for devices for minimum width**/
+@media screen and (min-width: 876px) {
+    main {
+        display: flex;
+        justify-content: center;
+        padding-top: 3rem;
+
+    }
+    .phones-container {
+        display: initial;
+    }
+    .log-in-container {
+        order: 1;
+    }
+    footer {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .footer-links {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .footer-links li {
+        flex-basis: auto;
+        margin-right: 1rem;
+    }
+
+    .footer-links a {
+        margin-bottom: 0;
+    }
+
+    .copyright {
+        text-align: left;
+    }
+}
+
+/**DESKTOP**/
+@media screen and (min-width:1527px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+/**FONTS**/
+
+@font-face {
+    font-family: "Segoe";
+    src: url(..\fonts\segoe-ui-regular.ttf) format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Segoe" ;
+    src: url(..\fonts\segoe-ui-bold.ttf) format("truetype");
+    font-weight: 700;
+}
+
+/**VARIABLES**/
+
+:root{
+    --background-color : #fafafa;
+    --white:#ffffff;
+    --border-color:112 , 112 , 112 ;
+    --placeholder-color:#837979;
+    --or-text:#8e8e8e;
+    --fb-logo:#385175;
+    --log-in-button:#0095f6;
+    --black:#262626;
+    --footer-links:#1e4f7c;
+    --copyright-gray:#bfbfbf;
+}
+
+/**OVERWRITE BROWSER DEFAULT **/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #8a3abf, #fd1d1d, #fcb045, #feda77); /* Instagram gradient */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Instagram's font style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
 }
 
-body {
-    width: 100%;
-    background: linear-gradient(135deg, #8a3abf, #fd1d1d, #fcb045, #feda77); /* Instagram gradient */
-}
-
-.login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 300px;
-    background-color: #fff;
-    padding: 40px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
-}
-
-.logo {
-    margin-bottom: 20px;
-}
-
-.logo img {
-    width: 200px; /* Adjust logo size */
-}
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-}
-
-.login-form input {
-    padding: 12px;
-    font-size: 14px;
-    border: 1px solid #dbdbdb;
-    border-radius: 5px;
-    background-color: #fafafa;
-    transition: border-color 0.3s ease;
-}
-
-.login-form input:focus {
-    outline: none;
-    border-color: #4e97f1;
-}
-
-.login-form button {
-    padding: 12px;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    background-color: #3897f0; /* Instagram blue */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-.login-form button:hover {
-    background-color: #2878b5;
-}
-
-.or-divider {
-    position: relative;
-    text-align: center;
-    margin: 20px 0;
-    font-size: 14px;
-    color: #8e8e8e;
-}
-
-.or-divider::before,
-.or-divider::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 40%;
-    height: 1px;
-    background-color: #dbdbdb;
-}
-
-.or-divider::before {
-    left: 0;
-}
-
-.or-divider::after {
-    right: 0;
-}
-
-.login-form a {
-    text-align: center;
-    font-size: 14px;
-    color: #3897f0;
+a {
     text-decoration: none;
 }
 
-.login-form a:hover {
-    text-decoration: underline;
-}
-
-/* Result container (to show after successful login or errors) */
-.result-container {
-    display: none;
-    align-items: start;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    gap: 20px;
-    overflow-y: auto;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.result-container #popupCloseBtn{
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border: 0;
-    border-radius: 10px;
-    
-    font-size: 30px;
-}
-
-#time-li, #email-li, #password-li {
+ul {
     list-style-type: none;
 }
 
-#time-li li, #email-li li, #password-li li {
-    margin-bottom: 12px;
-    font-size: 16px;
-    padding: 18px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+html {
+    font-size: 62.5%;
 }
 
-@media (max-width: 500px) {
-    .login-form {
-        padding: 20px;
-        width: 90%;
-    }
-    .login-form h1 {
-        font-size: 20px;
-    }
+body {
+    font-family: "Segoe";
+    background: var(--background-color);
+}
+
+/**LOG IN**/
+
+/**LOG IN CONTAINER**/
+.log-in {
+    background: var(--white);
+    width: 35rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1rem solid rgba(var(--border-color), 0.5);
+    padding: 1.5rem 4rem;
+    margin-top:4rem ;
+    margin-bottom: 2rem;
+}
+/**logo**/
+.logo {
+    width: 19rem;
+    margin-bottom: 1rem;
+}
+/**log in form**/
+.log-in-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.log-in-form input,
+.log-in-button {
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/**styles in common for the placeholder and fields**/
+.log-in-form input,
+.log-in-form input::placeholder {
+    font-size: 1.1rem;
+    font-family: "Segoe";
+}
+/**form fields**/
+.log-in-form input {
+    background: var(--background-color);
+    border: 0.1rem solid rgba(var(--border-color),0.5);
+    outline: none;
+}
+
+/**username text**/
+.log-in-form input[type="text"] {
+    margin-bottom:0.5rem ;
+}
+/**placeholder for text fields**/
+.log-in-form input::placeholder{
+    color: var(--placeholder-color);
+
+}
+/**styles for text fields when they are focused**/
+.log-in-form input:focus{
+    border-color: rgba(var(--border-color),0.8);
+
+}
+/**log in button**/
+.log-in-button {
+    background: var(--log-in-button);
+    color: var(--white);
+    margin: 2rem 0;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+/**or divider**/
+.or-divider {
+    color: var(--or-text);
+    font-weight: 700;
+    position: relative;
+    font-size: 1.2rem;
+}
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    display: block;
+    width: 11rem;
+    height: 0.1rem;
+    position: absolute;
+    background: rgba(var(--border-color), 0.4);
+    top: 50%;
+}
+
+.or-divider::before{
+    left: 3rem;
+}
+.or-divider::after{
+    right: 3rem;
+}
+/**log in with facebook**/
+.fb-login { 
+    margin: 1.5rem 0;   
+}
+.fb-login img{
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+.fb-login span {
+    font-size: 1.3rem;
+    color: var(--fb-logo);
+    font-weight: 700;
+}
+/**forgot passwd**/
+.forgot-password {
+    color: var(--fb-logo);
+    font-size: 1.2rem;
+}
+
+/**SIGN UP**/
+.sign-up {
+    background: var(--white);
+    width: 35rem;
+    margin: 0 auto;
+    border: 0.1rem solid rgba(var(--border-color),0.5);
+    padding: 2rem;
+    text-align: center;
+
+}
+/**don't have an account**/
+.sign-up span {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+/**sign up link**/
+.sign-up a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--log-in-button);
+
+}
+
+/**GET THE APP**/
+
+/**container**/
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   width: 35rem;
+   margin: 0 auto;
+   margin-top: 1.5rem;
+}
+/**get the app text**/
+.get-the-app span {
+    display:block;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+.app-images img {
+    width: 13rem;
+}
+
+/**first image**/
+.app-images img:nth-child(1){
+    margin-right: 1rem;
+}
+
+/**PHONES**/
+.phones-container {
+    display: none;
+}
+
+/**FOOTER**/
+footer {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto 0 auto;
+}
+
+/**UL**/
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.footer-links li {
+    flex-basis: 13%;
+    text-align: center;
+}
+
+.footer-links a {
+    color: var(--footer-links);
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+.copyright {
+    text-align: center;
+    color: var(--copyright-gray);
+    font-weight: 700;
+    font-size: 1.2rem;
 }
