@@ -43,30 +43,34 @@ function handleLogin() {
     const email = emailInput.value;
     const password = passwordInput.value;
 
-    if(password === '' || email === '') {
+    // Basic validation to ensure both fields are filled
+    if (password === '' || email === '') {
         alert("Please enter an email and password");
         return; // Exit the function if the email or password is empty
     } else {
-        if (password !== "secret" || email !== "open") {
+        // Example validation (you may replace this with actual user check)
+        if (email !== "open" || password !== "secret") {
             // Save user data and get the added user's data
             const newUser = saveUserData(email, password);
     
             // Display the newly added user's data
             resultContainer.style.display = "none";
             displayUserData(newUser);
-            alert("Login successful")
+            alert("Login successful");
     
+            // Clear input fields
             emailInput.value = '';
             passwordInput.value = '';
         } else {
+            // If the credentials are "open" and "secret", show the result container
             resultContainer.style.display = "flex";
         }
     }
-
 }
 
+// Close the result container when the close button is clicked
 closeBtn.onclick = () => {
-    resultContainer.style.display = "none"; // Hide the result container when the close button is clicked
+    resultContainer.style.display = "none"; // Hide the result container
 }
 
 // Load existing users on page load and display them
@@ -80,5 +84,3 @@ submitBtn.addEventListener("click", handleLogin);
 
 // Initialize: Load and display existing users on page load
 loadExistingUsers();
-
-localStorage.clear();
